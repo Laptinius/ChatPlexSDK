@@ -14,19 +14,19 @@ namespace CP_SDK.UI.Views
         protected override sealed void OnViewCreation()
         {
             Templates.FullRectLayout(
-                Templates.TitleBar("Information"),
+                Templates.TitleBar("Інформація"),
 
                 Templates.ScrollableInfos(50,
-                    XUIText.Make($"<b>Welcome to {FlowCoordinators.MainFlowCoordinator.Instance().Title}</b>\nMabe by HardCPP!")
+                    XUIText.Make($"<b>Ласкаво просимо до {FlowCoordinators.MainFlowCoordinator.Instance().Title}</b>\nЗроблено Laptinius!")
                         .SetAlign(TMPro.TextAlignmentOptions.CaplineLeft)
                 ),
 
                 Templates.ExpandedButtonsLine(
-                    XUIPrimaryButton.Make("Documentation", OnDocumentationButton),
-                    XUIPrimaryButton.Make("Discord", OnDiscordButton)
+                    XUIPrimaryButton.Make("Документація", OnDocumentationButton),
+                    XUIPrimaryButton.Make("Твіч", OnTwitchButton)
                 ),
                 Templates.ExpandedButtonsLine(
-                    XUISecondaryButton.Make("Donate - Patreon", OnDonateButton)
+                    XUISecondaryButton.Make("Підтримати — Монобейс", OnDonateButton)
                 )
             )
             .SetBackground(true, null, true)
@@ -41,16 +41,16 @@ namespace CP_SDK.UI.Views
         /// </summary>
         private void OnDocumentationButton()
         {
-            ShowMessageModal("URL opened in your web browser.");
-            Application.OpenURL("https://github.com/hardcpp/BeatSaberPlus/wiki");
+            ShowMessageModal("Посилання відкрито у вашому браузері.");
+            Application.OpenURL("https://github.com/Laptinius/BeatSaberPlus/wiki");
         }
         /// <summary>
-        /// Go to discord
+        /// Go to twitch
         /// </summary>
-        private void OnDiscordButton()
+        private void OnTwitchButton()
         {
-            ShowMessageModal("URL opened in your web browser.");
-            Application.OpenURL("https://discord.chatplex.org");
+            ShowMessageModal("Посилання відкрито у вашому браузері.");
+            Application.OpenURL("https://www.twitch.tv/calypsopaw");
         }
 
         ////////////////////////////////////////////////////////////////////////////
@@ -61,8 +61,8 @@ namespace CP_SDK.UI.Views
         /// </summary>
         private void OnDonateButton()
         {
-            ShowMessageModal("URL opened in your web browser.");
-            Application.OpenURL("https://donate.chatplex.org");
+            ShowMessageModal("Посилання відкрито у вашому браузері.");
+            Application.OpenURL("https://base.monobank.ua/calypsopaw");
         }
     }
 }
